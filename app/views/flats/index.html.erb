@@ -1,0 +1,28 @@
+<div class="container mt-3">
+  <div class="row">
+    <% @flats.each do |flat| %>
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="https://media.homeanddecor.com.sg/public/2017/10/erstudioserangoon1_0.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"><%= flat.name %></h5>
+            <p class="card-text"><%= flat.address%></p>
+            <div class="row">
+              <div class="col">
+                <p class="card-text"><%= flat.number_of_guests%> <i class="fa-solid fa-person-walking-luggage"></i></p>
+              </div>
+              <div class="col">
+                <p class="card-text">£<%= flat.price_per_night%> <i class="fa-solid fa-coins"></i><p>
+              </div>
+            </div>
+            <div>
+              <a class="btn btn-primary" href="/flats/show" role="button">More info</a>
+              <a class="btn btn-warning" href="/flats/show" role="button">Edit</a>
+              <a class="btn btn-danger" href="/flats/show" role="button">Remove</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
